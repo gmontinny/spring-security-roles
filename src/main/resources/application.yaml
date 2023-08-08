@@ -1,0 +1,20 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 1203
+    driverClassName: com.mysql.jdbc.Driver
+
+  flyway:
+    user: root
+    password: 1203
+    url: jdbc:mysql://localhost:3306/test
+    baseline-version: 0.0
+    enabled: true
+    locations: classpath:db/migration
+    table: flyway_schema_history
+    baselineOnMigrate: true
+
